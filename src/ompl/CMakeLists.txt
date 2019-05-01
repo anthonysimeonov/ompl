@@ -80,7 +80,7 @@ else(MSVC)
   set_target_properties(ompl PROPERTIES VERSION "${OMPL_VERSION}" SOVERSION "${OMPL_ABI_VERSION}")
 endif(MSVC)
 
-# install the library
+# install the library (TRYING TO HARDCODE THE DESTINATION ON 5/1 TO GET NEW PLANNER)
 install(TARGETS ompl
     DESTINATION ${CMAKE_INSTALL_LIBDIR}
     COMPONENT ompl)
