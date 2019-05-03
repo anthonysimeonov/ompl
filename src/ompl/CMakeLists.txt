@@ -56,6 +56,7 @@ if(MSVC OR IS_ICPC)
 else(MSVC OR IS_ICPC)
   add_library(ompl SHARED ${OMPL_SOURCE_CODE})
 endif(MSVC OR IS_ICPC)
+
 target_link_libraries(ompl
   ${OMPL_LINK_LIBRARIES}
   ${Boost_DATE_TIME_LIBRARY}
@@ -64,7 +65,8 @@ target_link_libraries(ompl
   ${Boost_FILESYSTEM_LIBRARY}
   ${Boost_SYSTEM_LIBRARY}
   ${Boost_CHRONO_LIBRARY}
-  ${CMAKE_THREAD_LIBS_INIT})
+  ${CMAKE_THREAD_LIBS_INIT}
+  ${TORCH_LIBRARIES})
 
 if (OMPL_HAVE_SPOT)
   target_link_libraries(ompl ${SPOT_LIBRARIES})

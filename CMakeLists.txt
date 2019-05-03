@@ -170,6 +170,9 @@ if(PYTHON_FOUND AND NOT Boost_VERSION VERSION_LESS "106300")
     endif()
 endif()
 
+# trying to add torch here, instead of at the lower level
+find_package(Torch REQUIRED)
+
 # R is needed for running Planner Arena locally
 find_program(R_EXEC R)
 
