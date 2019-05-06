@@ -65,8 +65,8 @@ target_link_libraries(ompl
   ${Boost_FILESYSTEM_LIBRARY}
   ${Boost_SYSTEM_LIBRARY}
   ${Boost_CHRONO_LIBRARY}
-  ${CMAKE_THREAD_LIBS_INIT}
-  ${TORCH_LIBRARIES})
+  ${CMAKE_THREAD_LIBS_INIT})
+#  ${TORCH_LIBRARIES})
 
 if (OMPL_HAVE_SPOT)
   target_link_libraries(ompl ${SPOT_LIBRARIES})
