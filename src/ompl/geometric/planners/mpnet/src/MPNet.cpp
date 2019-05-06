@@ -51,7 +51,7 @@
 #include "ompl/util/GeometricEquations.h"
 
 //torch
-#include <torch/torch.h>
+// #include <torch/torch.h>
 
 ompl::geometric::MPNet::MPNet(const base::SpaceInformationPtr &si)
   : base::Planner(si, "MPNet")
